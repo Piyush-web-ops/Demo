@@ -1,36 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piyush Rai Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Piyush Rai | DevOps Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: Consolas, monospace;
+    }
+
+    body {
+      background: #050505;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      background: radial-gradient(circle, #130000, #050505);
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      color: #ff1a1a;
+      text-shadow: 0 0 15px #ff0000;
+    }
+
+    .hero p {
+      margin-top: 15px;
+      color: #ccc;
+      font-size: 1.2rem;
+    }
+
+    .typing {
+      color: #ff3b3b;
+      font-size: 1.2rem;
+      margin-top: 15px;
+      border-right: 2px solid red;
+      display: inline-block;
+      padding-right: 6px;
+      text-shadow: 0 0 8px red;
+    }
+
+    .btns {
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid red;
+      border-radius: 6px;
+      transition: 0.3s;
+      box-shadow: 0 0 10px red;
+    }
+
+    .btn:hover {
+      background: red;
+      transform: translateY(-3px);
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    h2 {
+      color: #ff2e2e;
+      margin-bottom: 30px;
+      text-shadow: 0 0 10px red;
+      font-size: 2rem;
+    }
+
+    .about, .contact {
+      color: #ccc;
+      font-size: 1.05rem;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+      gap: 20px;
+    }
+
+    .skill-card {
+      border: 1px solid #aa0000;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255,0,0,0.3);
+      transition: 0.3s;
+    }
+
+    .skill-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 18px red;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+      gap: 25px;
+    }
+
+    .project-card {
+      border: 1px solid #700000;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 18px red;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #400000;
+      color: #888;
+    }
+
+    @media(max-width:768px){
+      .hero h1{
+        font-size:2.2rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <section class="hero">
-        <h1>Piyush Rai</h1>
-        <h2 id="typing"></h2>
-        <p>Aspiring Cloud & DevOps Engineer</p>
-    </section>
+  <!-- HERO -->
+  <header>
+    <div class="hero">
+      <h1>Piyush Rai</h1>
+      <p>Aspiring DevOps Engineer</p>
+      <div class="typing" id="typing"></div>
 
-    <section class="card">
-        <h2>About Me</h2>
-        <p>I am learning AWS, Docker, Kubernetes, Terraform, and DevOps practices.</p>
-    </section>
+      <div class="btns">
+        <a class="btn" href="https://github.com/Piyush-web-ops" target="_blank">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/piyush-rai-6893ab364" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </header>
 
-    <section class="card">
-        <h2>Skills</h2>
-        <ul>
-            <li>AWS</li>
-            <li>Docker</li>
-            <li>Kubernetes</li>
-            <li>Terraform</li>
-            <li>Linux</li>
-            <li>Jenkins</li>
-        </ul>
-    </section>
+  <!-- ABOUT -->
+  <section>
+    <h2>About Me</h2>
+    <div class="about">
+      I am Piyush Rai, an aspiring DevOps Engineer passionate about automation,
+      cloud computing, containerization, and infrastructure management.
+      I enjoy working with Linux, AWS, Docker, Kubernetes, Terraform, Jenkins,
+      and monitoring tools.
+    </div>
+  </section>
 
-    <script src="js/script.js"></script>
+  <!-- SKILLS -->
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill-card">AWS</div>
+      <div class="skill-card">Docker</div>
+      <div class="skill-card">Kubernetes</div>
+      <div class="skill-card">Terraform</div>
+      <div class="skill-card">Jenkins</div>
+      <div class="skill-card">Linux</div>
+      <div class="skill-card">Git / GitHub</div>
+      <div class="skill-card">Monitoring</div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section>
+    <h2>Projects</h2>
+    <div class="projects">
+
+      <div class="project-card">
+        <h3>Cacti Monitoring + Telegram Alerts</h3>
+        <p>
+          Built monitoring for MikroTik devices using Cacti and configured
+          Telegram alerts for downtime and failures.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Kubernetes Cluster Setup</h3>
+        <p>
+          Deployed Kubernetes cluster with master/worker nodes, networking,
+          pods, ReplicaSets, and namespaces.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Dockerized Web Apps</h3>
+        <p>
+          Containerized NGINX and Apache applications using Dockerfile,
+          image builds, volumes, and container deployment.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section>
+    <h2>Contact</h2>
+    <div class="contact">
+      📧 Email: prai71599@gmail.com <br><br>
+      Open to DevOps, Cloud, Linux, and Infrastructure opportunities.
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Piyush Rai | Cyber DevOps Portfolio
+  </footer>
+
+  <script>
+    const words = [
+      "Linux Enthusiast",
+      "Docker & Kubernetes Learner",
+      "AWS Cloud Explorer",
+      "Terraform Automation",
+      "DevOps Engineer"
+    ];
+
+    let wordIndex = 0;
+    let charIndex = 0;
+    let typing = document.getElementById("typing");
+    let deleting = false;
+
+    function typeEffect() {
+      let currentWord = words[wordIndex];
+
+      if (!deleting) {
+        typing.textContent = currentWord.substring(0, charIndex++);
+        if (charIndex > currentWord.length) {
+          deleting = true;
+          setTimeout(typeEffect, 1000);
+          return;
+        }
+      } else {
+        typing.textContent = currentWord.substring(0, charIndex--);
+        if (charIndex < 0) {
+          deleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+        }
+      }
+
+      setTimeout(typeEffect, deleting ? 50 : 100);
+    }
+
+    typeEffect();
+  </script>
+
 </body>
 </html>
